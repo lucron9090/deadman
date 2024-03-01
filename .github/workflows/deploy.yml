@@ -2,7 +2,7 @@ name: Deploy to Ubuntu VPS
 
 on:
   push:
-    branches: [ master ]  # Deploy when you push to the 'main' branch
+    branches: [ main ]  # Deploy when you push to the 'main' branch
 
 jobs:
   deploy:
