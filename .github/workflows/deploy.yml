@@ -15,6 +15,6 @@ jobs:
       # Modify `master` to valid version, see https://github.com/marketplace/actions/action-rsync
       - uses: up9cloud/action-rsync@master
         env:
-          HOST: madman@coscmcs.cc
+          HOST: coscmcs.cc
           KEY: ${{ secrets.VPS_SSH_KEY }}
           TARGET: /var/www/deadman 
