@@ -11,10 +11,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Deploy using rsync
-        uses: up9cloud/action-rsync@master
-        with:
-          rsync_options: -avzh --delete  # Options for efficient transfer
-          source: .                  # The local source directory (your repo)
-          destination: madman@coscmcs.cc:/var/www/deadman 
-          private_key: ${{ secrets.VPS_SSH_KEY }}  # Reference to the secret below
+      - uses: actions/checkout@v2
+      # Modify `master` to valid version, see https://github.com/marketplace/actions/action-rsync
+      - uses: up9cloud/action-rsync@master
+        env:
+          HOST: madman@coscmcs.cc
+          KEY: ${{ secrets.VPS_SSH_KEY }}
+          TARGET: /var/www/deadman 
