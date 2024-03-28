@@ -1,6 +1,33 @@
-{
+ /*
+ OFF CODESPACE:
+ GOOGLE CLOUD CLI
+ GOOGLE FIREBASE w/ sqlite
+
+
+
+CODESPACE:
+http://codespaces-a0b911-4000.app.github.dev
+  "features": {
+    "ghcr.io/devcontainers-contrib/features/vue-cli:2": {},
+    "ghcr.io/devcontainers-contrib/features/quasar-cli:2": {}
+  },
+
+
+ */
+
+
+
+ {
   "image": "mcr.microsoft.com/devcontainers/universal:2",
   "features": {
-    "ghcr.io/devcontainers-contrib/features/vue-cli:2": {}
+    "ghcr.io/devcontainers-contrib/features/vue-cli:2": {},
+    "ghcr.io/devcontainers-contrib/features/quasar-cli:2": {}
+  },
+  "customizations": {
+   "vscode": {
+    "extensions": [
+     "Vue.volar"
+    ]
+   }
   }
 }
